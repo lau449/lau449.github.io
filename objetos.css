@@ -1,0 +1,258 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+}
+.conter{
+    display: flex;
+    justify-content: center;
+}
+.card{
+
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #fffefe;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #e9e1e1;
+  
+}
+.card .back .link{
+    border-top: solid 1px #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: aliceblue;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/*pantallas pequeñas*/
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+    }
+    nav li{
+        margin-right: 0;
+    }
+    main{
+        padding: 1em;
+    }
+    section{
+        margin-bottom: 10px;
+    }
+}
+/*pantallas medianas*/
+@media (min-width: 769px) and (max-width:1024px){
+    main{
+        padding: 2em;
+    }
+    section{
+        margin-bottom: 20px;
+    }
+}
+/*pantallas grandes*/
+@media (min-width: 1025px){
+    main{
+        padding: 3em;
+    }
+    section{
+        margin-bottom: 30px;
+    }
+}
+/*estilo*/
+/*Es el diseño del menú desplegable*/
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgb(255, 254, 254);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    color: #c1f7d9;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+/*Diseño de el boton*/
+button{
+    width: 120px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 20px;  
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    border: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+/*Cambio de color al poner el cursor sobre el boton*/
+button:hover{
+    background-color: rgba(66, 118, 153, 0.842);
+    transition: 0.3s;
+}
+.boton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+/*Acomoda la posición de el video*/
+.fondo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.fondo {
+    width: 100%;
+}
+.logo{
+    background: linear-gradient(to right, #5ad8ee 50%, #c1f7d9 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+.der{
+    left: 70%;
+}
+/* Le da diseño al titulo principal*/
+.titulo h1{
+    text-align: center;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+/*genera el espacio que se encuentra entre el titulo y la introducción*/
+.espacio{
+    margin-top: 25%;
+}
+
+video{
+    box-shadow: 0 5px 10px #ffffff;
+}
+
+table{
+    margin-right: 5px;
+    display: flex;
+    border: 10px solid rgba(78, 183, 202, 0.658);
+    width: 80%;
+    height: 0%;
+}
+
+.brand{
+    width: 175px;
+    height: 75px;
+}
+
+.texto{
+    text-align: left;
+}
+.color{
+    background-color:  rgba(21, 19, 51, 0.945);
+}
+p{
+    color: rgba(240, 248, 255, 0.76);
+    text-align: center;
+}
+
+.jus{
+    text-align: justify;
+}
+
+h1{
+    color: aliceblue;
+}
+
+
+h2{
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.indi{
+    color: #FFC67D;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    background-color:  #06071d88;
+    color: antiquewhite;
+    margin-top: 10%;
+}
+
+.ima{
+    max-width: 250px;
+    float: right;
+    border: 3px solid #75abb4;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
